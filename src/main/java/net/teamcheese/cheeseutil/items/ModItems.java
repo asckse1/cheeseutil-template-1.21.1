@@ -34,9 +34,7 @@ public class ModItems {
 
 
 
-    public static final DeferredItem<Item> AETHER_BOOK = ITEMS.register("the_holy_bibble",
-            () -> new DimensionalBookItem(new Item.Properties(), "aether", "the_aether")
-            );
+
     public static final DeferredItem<Item> NETHER_BOOK = ITEMS.register("nether_grimoire",
             () -> new DimensionalBookItem(new Item.Properties(), "minecraft", "nether")
             );
