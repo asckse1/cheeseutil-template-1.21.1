@@ -10,9 +10,16 @@ public class ModFoodProperties {
     public static final FoodProperties RedMossBowl = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f).effect(
             () -> new MobEffectInstance(
                     MobEffects.REGENERATION,
-                    60,
+                    400,
                     2
             ), 1.0f).usingConvertsTo(Items.BOWL).build();
+    public static final FoodProperties BlueMossBowl = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f).effect(
+            () -> new MobEffectInstance(
+                    MobEffects.WATER_BREATHING,
+                    1400,
+                    1
+            )
+            , 1.0f).usingConvertsTo(Items.BOWL).build();
 
 
 }

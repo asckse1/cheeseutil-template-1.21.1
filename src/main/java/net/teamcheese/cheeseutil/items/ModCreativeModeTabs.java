@@ -25,7 +25,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RED_MOSS_CARPET);
                         output.accept(ModBlocks.BLUE_MOSS_BLOCK);
                         output.accept(ModBlocks.BLUE_MOSS_CARPET);
+                        output.accept(ModBlocks.CHARRED_MOSS_BLOCK);
+                        output.accept(ModBlocks.CHARRED_MOSS_CARPET);
                         output.accept(ModBlocks.YELLOW_MOSSY_GROWTH);
+                        output.accept(ModBlocks.RED_MOSSY_GROWTH);
+                        output.accept(ModBlocks.BLUE_MOSSY_GROWTH);
+                        output.accept(ModBlocks.CHARRED_MOSSY_GROWTH);
 
     }).build());
     public static final Supplier<CreativeModeTab> MOSS_CULTURES_TAB = CREATIVE_MODE_TAB.register("moss_cultures_tab",
@@ -36,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLUE_MOSS_CULTURE);
                         output.accept(ModItems.RED_MOSS_CULTURE);
                         output.accept(ModItems.YELLOW_MOSS_CULTURE);
+                        output.accept(ModItems.BLACK_MOSS_CULTURE);
                         output.accept(ModItems.PLAIN_MOSS_CULTURE);
 
     }).build());
@@ -70,6 +76,7 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, "grimoires_tab"))
                     .displayItems( (parameters, output) ->{
                         output.accept(ModItems.RED_MOSS_BOWL);
+                        output.accept(ModItems.BLUE_MOSS_BOWL);
 
             })
                     .build()

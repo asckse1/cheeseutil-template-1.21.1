@@ -3,6 +3,7 @@ package net.teamcheese.cheeseutil.items.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionResult;
@@ -10,6 +11,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +19,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 
 public class GrowthCatalystItem extends Item
@@ -53,11 +57,12 @@ public class GrowthCatalystItem extends Item
                     catalyst.consume(1, player);
                     break;
                 case("cheeseutil:red_moss_block"):
-
-                    log.debug("Not Yet Implemented. SearchCode (NYI001) - ITEM/FEATURE: RED_MOSSY_GROWTH_CONVERSION");
+                    level.setBlock(clickedBlockPos, ModBlocks.RED_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+                    catalyst.consume(1, player);
                     break;
                 case("cheeseutil:blue_moss_block"):
-                    log.debug("Not Yet Implemented. SearchCode (NYI001) - ITEM/FEATURE: BLUE_MOSSY_GROWTH_CONVERSION");
+                    level.setBlock(clickedBlockPos, ModBlocks.BLUE_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+                    catalyst.consume(1, player);
                     break;
                 default:
                     log.debug("Not Yet Implemented. SearchCode (NYI001) || POTENTIALLY: Not a valid target for this feature (FC: MGC001) -=- TARGET:" + clickedName);
@@ -68,5 +73,11 @@ public class GrowthCatalystItem extends Item
 
         }
         return super.useOn(context);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.cheeseutil.GrowthCatalyst.tooltip"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

@@ -51,8 +51,15 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> YELLOW_MOSSY_GROWTH = registerBlock("yellow_mossy_growth",
             () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+    public static final DeferredBlock<Block> BLUE_MOSSY_GROWTH = registerBlock("blue_mossy_growth",
+            () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+    public static final DeferredBlock<Block> RED_MOSSY_GROWTH = registerBlock("red_mossy_growth",
+            () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+
     public static final DeferredBlock<Block> CHARRED_MOSSY_GROWTH = registerBlock("charred_mossy_growth",
             () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
             DeferredBlock<T> toReturn = BLOCKS.register(name, block);
             registerBlockItem(name, toReturn);
