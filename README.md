@@ -1,25 +1,33 @@
+# Cheese Util
 
-Installation information
-=======
+Cheese util is a minecraft mod for team cheese modpacks.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Includes dimensional items, productive moss, and a few other odds and ends necessary for their packs.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+# Build Instructions
+I dont think this is really necessary because you shouldn't be building this unless you're playing the CF distributed pack (Because of dependencies and such) for full functionality, and if you *do* you should know how. But just in case:
+## Linux:
+1. Open your console with the project root as the working directory.
+2. Ensure ```gradlew``` is marked as executable
+     ```chmod u+x```
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+3. Execute ```./gradlew build```
+4. Finished jar should be located in ```<ProjectRoot>/build/libs```
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Windows
+
+1. Open powershell with the project root as the working directory
+2. execute ```gradlew.bat build```
+3. Finished jar should be located in ```<ProjectRoot>/build/libs```
+
+
+
+# Dependencies
+
+As of now the mod strictly requires the twilight forest mod to *also* be installed.
+
+it will in the future require terrafirmacraft and the aether.
+
+I do have plans for an additional mod or two within the TeamCheese mod suite - some will be dependents and some will be dependencies for future revisions - you have been warned.
+
