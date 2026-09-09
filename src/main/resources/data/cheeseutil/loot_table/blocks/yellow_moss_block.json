@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.8,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cheeseutil:yellow_moss_culture"
+        }
+
+
+      ],
+      "rolls": 4.0
+
+    }
+
+
+
+  ],
+  "random_sequence": "cheeseutil:blocks/yellow_moss_block"
+
+}

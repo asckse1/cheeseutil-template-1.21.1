@@ -1,0 +1,21 @@
+{
+  "net.cheeseutil.nyx_message.enter": "The Nightmothers Darkness Envelops Your Senses",
+  "block.cheeseutil.yellow_moss_block": "Block of Yellow Moss",
+  "block.cheeseutil.red_moss_block": "Block of Red Moss",
+  "block.cheeseutil.blue_moss_block": "Block of Blue Moss",
+  "block.cheeseutil.yellow_moss_carpet": "Yellow Moss Carpet",
+  "block.cheeseutil.red_moss_carpet": "Red Moss Carpet",
+  "block.cheeseutil.blue_moss_carpet": "Blue Moss Carpet",
+  "item.cheeseutil.yellow_moss_culture": "Yellow Moss Culture",
+  "item.cheeseutil.blue_moss_culture": "Blue Moss Culture",
+  "item.cheeseutil.red_moss_culture": "Red Moss Culture",
+  "item.cheeseutil.moss_culture": "Plain Moss Culture",
+  "item.cheeseutil.culturing_knife": "Culturing Knife",
+  "item.cheeseutil.mossy_iron": "Mossy Iron",
+  "creativetab.cheeseutil.moss_blocks": "Moss Blocks",
+  "creativetab.cheeseutil.moss_cultures": "Moss Cultures",
+  "creativetab.cheeseutil.moss_tools_tab": "Culturing Utilities",
+  "creativetab.cheeseutil.grimoires": "Dimensional Grimoires",
+  "cheeseutil.hornedowl": "早くこっちに来て…待ちきれない"
+
+}

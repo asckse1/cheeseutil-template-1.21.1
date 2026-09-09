@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.4,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cheeseutil:charred_moss_culture"
+        }
+
+
+      ],
+      "rolls": 2.0
+
+    }
+
+
+
+  ],
+  "random_sequence": "cheeseutil:blocks/charred_moss_block"
+
+}

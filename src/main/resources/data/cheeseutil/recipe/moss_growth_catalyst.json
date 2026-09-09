@@ -1,0 +1,22 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " B ",
+    "BWB",
+    " B "
+
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "cheeseutil:moss_growth_catalyst"
+  }
+}

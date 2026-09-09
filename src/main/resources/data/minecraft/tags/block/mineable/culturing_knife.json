@@ -1,0 +1,13 @@
+{
+  "replace": "false",
+  "values": [
+    "cheeseutil:yellow_moss_block",
+    "cheeseutil:blue_moss_block",
+    "cheeseutil:red_moss_block",
+    "cheeseutil:yellow_moss_carpet",
+    "cheeseutil:blue_moss_carpet",
+    "cheeseutil:red_moss_carpet"
+
+  ]
+
+}

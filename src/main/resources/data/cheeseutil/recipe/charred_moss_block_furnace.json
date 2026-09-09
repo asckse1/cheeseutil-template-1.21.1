@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cooktime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:moss_block"
+  },
+  "result": {
+    "id":  "cheeseutil:charred_moss_block"
+
+  }
+
+}

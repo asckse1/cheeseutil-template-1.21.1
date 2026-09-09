@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cooktime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "cheeseutil:red_moss_culture"
+  },
+  "result": {
+    "id":  "minecraft:red_dye"
+
+  }
+
+}
