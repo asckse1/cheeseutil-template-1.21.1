@@ -10,19 +10,20 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CharredMossyGrowth extends Block implements BonemealableBlock  {
-    public CharredMossyGrowth(Properties properties) {
+public class MossyGrowthBlock extends Block implements BonemealableBlock  {
+
+    public MossyGrowthBlock(Properties properties) {
         super(properties);
     }
 
     @Override
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
-        return false;
+        return true;
     }
 
     @Override

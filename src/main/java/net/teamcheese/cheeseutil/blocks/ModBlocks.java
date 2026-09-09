@@ -1,6 +1,5 @@
 package net.teamcheese.cheeseutil.blocks;
 
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.items.*;
 import net.minecraft.world.item.BlockItem;
@@ -14,7 +13,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModSimpleBlocks {
+public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CheeseUtil.MODID);
 
@@ -51,9 +50,9 @@ public class ModSimpleBlocks {
     // Complex Blocks go below
 
     public static final DeferredBlock<Block> YELLOW_MOSSY_GROWTH = registerBlock("yellow_mossy_growth",
-            () -> new YellowMossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+            () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
     public static final DeferredBlock<Block> CHARRED_MOSSY_GROWTH = registerBlock("charred_mossy_growth",
-            () -> new YellowMossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
+            () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
             DeferredBlock<T> toReturn = BLOCKS.register(name, block);
             registerBlockItem(name, toReturn);

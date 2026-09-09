@@ -1,19 +1,15 @@
 package net.teamcheese.cheeseutil.items;
 
-import net.minecraft.core.component.DataComponents;
-
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.alchemy.PotionContents;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.items.custom.FuelItem;
 import net.teamcheese.cheeseutil.items.custom.GrowthCatalystItem;
-import net.teamcheese.cheeseutil.items.custom.NetherBookItem;
+import net.teamcheese.cheeseutil.items.custom.DimensionalBookItem;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.teamcheese.cheeseutil.items.custom.NyxBrewItem;
+import net.teamcheese.cheeseutil.items.custom.DimensionalPotionItem;
 
 
 
@@ -35,17 +31,25 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOSSY_IRON = ITEMS.register( "mossy_iron",
             () -> new Item(new Item.Properties()));
+
+
+
+    public static final DeferredItem<Item> AETHER_BOOK = ITEMS.register("the_holy_bibble",
+            () -> new DimensionalBookItem(new Item.Properties(), "aether", "the_aether")
+            );
     public static final DeferredItem<Item> NETHER_BOOK = ITEMS.register("nether_grimoire",
-            () -> new NetherBookItem(new Item.Properties())
+            () -> new DimensionalBookItem(new Item.Properties(), "minecraft", "nether")
             );
     public static final DeferredItem<Item> NYX_BREW = ITEMS.register("nyx_brew",
-            () -> new NyxBrewItem(new Item.Properties())
+            () -> new DimensionalPotionItem(new Item.Properties(), "twilightforest", "twilight_forest")
             );
+
+
     public static final DeferredItem<Item> RED_MOSS_BOWL = ITEMS.register("red_moss_bowl",
             () -> new Item(new Item.Properties().food(ModFoodProperties.RedMossBowl))
             );
     public static final DeferredItem<Item> BLACK_MOSS_CULTURE = ITEMS.register("charred_moss_culture",
-            () -> new FuelItem(new Item.Properties(), 40)
+            () -> new FuelItem(new Item.Properties(), 800)
 
     );
     public static final DeferredItem<Item> GROWTH_CATALYST = ITEMS.register("moss_growth_catalyst",

@@ -1,14 +1,13 @@
 package net.teamcheese.cheeseutil.items;
 
 import net.teamcheese.cheeseutil.CheeseUtil;
-import net.teamcheese.cheeseutil.blocks.ModSimpleBlocks;
+import net.teamcheese.cheeseutil.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.network.configuration.CheckExtensibleEnums;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -17,16 +16,16 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CheeseUtil.MODID);
     public static final Supplier<CreativeModeTab> MOSS_BLOCKS_TAB = CREATIVE_MODE_TAB.register("moss_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModSimpleBlocks.YELLOW_MOSS_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.YELLOW_MOSS_BLOCK.get()))
                     .title(Component.translatable("creativetab.cheeseutil.moss_blocks"))
                     .displayItems((parameters, output) ->{
-                        output.accept(ModSimpleBlocks.YELLOW_MOSS_BLOCK);
-                        output.accept(ModSimpleBlocks.YELLOW_MOSS_CARPET);
-                        output.accept(ModSimpleBlocks.RED_MOSS_BLOCK);
-                        output.accept(ModSimpleBlocks.RED_MOSS_CARPET);
-                        output.accept(ModSimpleBlocks.BLUE_MOSS_BLOCK);
-                        output.accept(ModSimpleBlocks.BLUE_MOSS_CARPET);
-                        output.accept(ModSimpleBlocks.YELLOW_MOSSY_GROWTH);
+                        output.accept(ModBlocks.YELLOW_MOSS_BLOCK);
+                        output.accept(ModBlocks.YELLOW_MOSS_CARPET);
+                        output.accept(ModBlocks.RED_MOSS_BLOCK);
+                        output.accept(ModBlocks.RED_MOSS_CARPET);
+                        output.accept(ModBlocks.BLUE_MOSS_BLOCK);
+                        output.accept(ModBlocks.BLUE_MOSS_CARPET);
+                        output.accept(ModBlocks.YELLOW_MOSSY_GROWTH);
 
     }).build());
     public static final Supplier<CreativeModeTab> MOSS_CULTURES_TAB = CREATIVE_MODE_TAB.register("moss_cultures_tab",

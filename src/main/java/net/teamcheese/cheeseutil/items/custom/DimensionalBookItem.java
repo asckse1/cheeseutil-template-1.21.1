@@ -2,10 +2,11 @@ package net.teamcheese.cheeseutil.items.custom;
 
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.minecraft.world.item.Item;
@@ -17,9 +18,23 @@ import net.teamcheese.cheeseutil.DimUtils;
 import static net.minecraft.world.level.Level.*;
 import static net.teamcheese.cheeseutil.DimUtils.*;
 
-public class NetherBookItem extends Item {
-    public NetherBookItem(Properties properties) {
+public class DimensionalBookItem extends Item {
+    public String dimNamepsace;
+    public String dimPath;
+    public ResourceKey dimKey;
+
+    public DimensionalBookItem(Properties properties, String dimNamepsace, String dimPath) {
+
         super(properties);
+        this.dimKey = ResourceKey.create(
+                Registries.DIMENSION,
+                ResourceLocation.fromNamespaceAndPath(dimNamepsace, dimPath)
+
+
+        );
+
+
+
     }
 
 
@@ -40,10 +55,10 @@ public class NetherBookItem extends Item {
 
                 ServerPlayer bookUser = (ServerPlayer) livingEntity;
 
-                ServerLevel nether = bookUser.server.getLevel(NETHER);
-                if(bookUser.serverLevel() != nether){
-                    BlockPos targetBlock = findSafePosition(nether, bookUser);
-                    DimUtils.sendToDim(bookUser,nether,targetBlock);
+                ServerLevel targetDim = bookUser.server.getLevel(dimKey);
+                if(bookUser.serverLevel() != targetDim){
+                    BlockPos targetBlock = findSafePosition(targetDim, bookUser);
+                    DimUtils.sendToDim(bookUser,targetDim,targetBlock);
 
 
 

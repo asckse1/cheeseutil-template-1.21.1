@@ -3,7 +3,6 @@ package net.teamcheese.cheeseutil.items.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionResult;
@@ -12,15 +11,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.teamcheese.cheeseutil.CheeseUtil;
-import net.teamcheese.cheeseutil.blocks.ModSimpleBlocks;
+import net.teamcheese.cheeseutil.blocks.ModBlocks;
 import org.slf4j.LoggerFactory;
-
-import java.util.logging.Logger;
 
 
 public class GrowthCatalystItem extends Item
@@ -49,11 +45,11 @@ public class GrowthCatalystItem extends Item
         if(clickedState.is(MOSS_BLOCKS)){
             switch (clickedName){
                 case("cheeseutil:charred_moss_block"):
-                    level.setBlock(clickedBlockPos, ModSimpleBlocks.CHARRED_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+                    level.setBlock(clickedBlockPos, ModBlocks.CHARRED_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
                     catalyst.consume(1, player);
                     break;
                 case("cheeseutil:yellow_moss_block"):
-                    level.setBlock(clickedBlockPos, ModSimpleBlocks.YELLOW_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+                    level.setBlock(clickedBlockPos, ModBlocks.YELLOW_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
                     catalyst.consume(1, player);
                     break;
                 case("cheeseutil:red_moss_block"):
