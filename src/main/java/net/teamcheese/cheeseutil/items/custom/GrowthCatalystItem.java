@@ -2,10 +2,9 @@ package net.teamcheese.cheeseutil.items.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
+
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
+
 import net.minecraft.world.InteractionResult;
 
 import net.minecraft.world.entity.player.Player;
@@ -16,7 +15,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.teamcheese.cheeseutil.CheeseUtil;
+
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
 import net.teamcheese.cheeseutil.util.ModTags;
 import org.slf4j.LoggerFactory;

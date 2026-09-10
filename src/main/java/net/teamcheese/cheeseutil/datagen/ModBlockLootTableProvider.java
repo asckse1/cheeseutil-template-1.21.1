@@ -1,17 +1,15 @@
 package net.teamcheese.cheeseutil.datagen;
 
-import net.minecraft.core.Holder;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.flag.FeatureFlagSet;
+
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -21,8 +19,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.LootNumberProviderType;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
@@ -31,9 +28,9 @@ import net.teamcheese.cheeseutil.util.ModTags;
 import org.apache.commons.lang3.RandomUtils;
 import org.jline.utils.Log;
 
-import java.util.Random;
+
 import java.util.Set;
-import java.util.logging.Logger;
+
 import java.util.stream.Collectors;
 
 

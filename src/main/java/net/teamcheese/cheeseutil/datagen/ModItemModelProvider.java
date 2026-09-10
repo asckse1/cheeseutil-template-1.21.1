@@ -1,8 +1,6 @@
 package net.teamcheese.cheeseutil.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.teamcheese.cheeseutil.CheeseUtil;
