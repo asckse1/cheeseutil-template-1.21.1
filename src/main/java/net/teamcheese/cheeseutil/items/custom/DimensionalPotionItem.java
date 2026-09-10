@@ -18,11 +18,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.PotionItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.teamcheese.cheeseutil.DimUtils;
+import net.teamcheese.cheeseutil.util.DimUtils;
 
 import static net.minecraft.world.level.Level.OVERWORLD;
-import static net.teamcheese.cheeseutil.DimUtils.findSafePosition;
-import static net.teamcheese.cheeseutil.DimUtils.sendToDim;
+import static net.teamcheese.cheeseutil.util.DimUtils.findSafePosition;
+import static net.teamcheese.cheeseutil.util.DimUtils.sendToDim;
 
 public class DimensionalPotionItem extends PotionItem {
 

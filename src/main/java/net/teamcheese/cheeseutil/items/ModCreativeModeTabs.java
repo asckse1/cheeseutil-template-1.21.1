@@ -47,12 +47,12 @@ public class ModCreativeModeTabs {
     }).build());
 
     public static final Supplier<CreativeModeTab> CULTURING_TOOLS_TAB = CREATIVE_MODE_TAB.register("moss_tools_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CULTURING_KNIFE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STONE_CULTURING_KNIFE.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, "moss_blocks_tab"),ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, "moss_culture_tab"))
                     .title(Component.translatable("creativetab.cheeseutil.moss_tools_tab"))
                     .displayItems((parameters, output) ->{
                         output.accept(ModItems.GROWTH_CATALYST);
-                        output.accept(ModItems.CULTURING_KNIFE);
+                        output.accept(ModItems.STONE_CULTURING_KNIFE);
                         output.accept(ModItems.MOSSY_IRON);
 
 

@@ -46,6 +46,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHARRED_MOSS_CARPET = registerBlock("charred_moss_carpet",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak().noCollission())
             );
+    public static final DeferredBlock<Block> MOSSY_IRON_ORE = registerBlock("mossy_iron_ore",
+            () -> new MossyOresBlock(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST))
+            );
 
     // Complex Blocks go below
 
@@ -58,7 +61,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CHARRED_MOSSY_GROWTH = registerBlock("charred_mossy_growth",
             () -> new MossyGrowthBlock(BlockBehaviour.Properties.of().sound(SoundType.MOSS).instabreak()));
-
+    public static final DeferredBlock<Block> RAW_MOSSY_IRON_BLOCK = registerBlock("raw_mossy_iron_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
             DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -1,0 +1,31 @@
+package net.teamcheese.cheeseutil.datagen;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.teamcheese.cheeseutil.CheeseUtil;
+import net.teamcheese.cheeseutil.items.ModItems;
+import net.teamcheese.cheeseutil.util.ModTags;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModItemTagProvider extends ItemTagsProvider {
+
+    public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, blockTags, CheeseUtil.MODID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+        tag(ModTags.Items.MOSS_CULTURES)
+                .add(ModItems.BLACK_MOSS_CULTURE.get())
+                .add(ModItems.RED_MOSS_CULTURE.get())
+                .add(ModItems.YELLOW_MOSS_CULTURE.get())
+                .add(ModItems.BLUE_MOSS_CULTURE.get());
+
+
+    }
+}

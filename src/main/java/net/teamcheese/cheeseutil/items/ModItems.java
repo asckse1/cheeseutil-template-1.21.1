@@ -34,11 +34,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PLAIN_MOSS_CULTURE = ITEMS.register( "moss_culture",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> CULTURING_KNIFE = ITEMS.register( "culturing_knife",
+    public static final DeferredItem<Item> STONE_CULTURING_KNIFE = ITEMS.register( "stone_culturing_knife",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOSSY_IRON = ITEMS.register( "mossy_iron",
             () -> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> RAW_MOSSY_IRON = ITEMS.register("raw_mossy_iron",
+            () -> new Item(new Item.Properties()));
 
 
 

@@ -41,7 +41,17 @@ public class MossyGrowthBlock extends Block implements BonemealableBlock  {
                         state,
                         Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE
                 );
-            }}
+
+            if(changedBlockState.is(Blocks.IRON_ORE))  {
+                level.setBlock(
+                        changedBlock,
+                        ModBlocks.MOSSY_IRON_ORE.get().defaultBlockState(),
+                        Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE
+
+                );
+            }
+            }
+        }
 
     }
 }

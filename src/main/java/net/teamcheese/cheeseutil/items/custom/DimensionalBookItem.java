@@ -13,10 +13,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import net.teamcheese.cheeseutil.DimUtils;
+import net.teamcheese.cheeseutil.util.DimUtils;
 
 import static net.minecraft.world.level.Level.*;
-import static net.teamcheese.cheeseutil.DimUtils.*;
+import static net.teamcheese.cheeseutil.util.DimUtils.*;
 
 public class DimensionalBookItem extends Item {
     public String dimNamepsace;

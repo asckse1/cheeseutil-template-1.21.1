@@ -1,4 +1,4 @@
-package net.teamcheese.cheeseutil;
+package net.teamcheese.cheeseutil.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

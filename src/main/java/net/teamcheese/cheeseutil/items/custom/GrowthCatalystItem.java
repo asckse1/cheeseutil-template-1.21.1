@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
+import net.teamcheese.cheeseutil.util.ModTags;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
@@ -25,11 +26,6 @@ import java.util.List;
 
 public class GrowthCatalystItem extends Item
 {
-    public static final TagKey<Block> MOSS_BLOCKS = TagKey.create(
-            Registries.BLOCK,
-            ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, "moss_block")
-
-    );
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(GrowthCatalystItem.class);
 
     public GrowthCatalystItem(Properties properties) {
@@ -46,7 +42,7 @@ public class GrowthCatalystItem extends Item
         Block clickedBlock = clickedState.getBlock();
         String clickedName = BuiltInRegistries.BLOCK.getKey(clickedBlock).toString();
         log.debug(clickedName + " is the name of the clicked block : Search Code (GC001)");
-        if(clickedState.is(MOSS_BLOCKS)){
+        if(isValidTarget(clickedState)){
             switch (clickedName){
                 case("cheeseutil:charred_moss_block"):
                     level.setBlock(clickedBlockPos, ModBlocks.CHARRED_MOSSY_GROWTH.get().defaultBlockState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
@@ -73,6 +69,10 @@ public class GrowthCatalystItem extends Item
 
         }
         return super.useOn(context);
+    }
+
+    private boolean isValidTarget(BlockState clickedState) {
+        return clickedState.is(ModTags.Blocks.MOSS_BLOCKS);
     }
 
     @Override
