@@ -6,6 +6,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.teamcheese.cheeseutil.CheeseUtil;
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
@@ -64,10 +65,10 @@ public class ModItemRecipeProvider extends RecipeProvider implements IConditionB
                 .pattern(" M ")
                 .pattern("BWB")
                 .pattern(" B ")
-                .define('M', ModItems.PLAIN_MOSS_CULTURE.asItem())
+                .define('M', Blocks.MOSS_BLOCK.asItem())
                 .define('W', Items.WATER_BUCKET.asItem())
                 .define('B', Items.BONE_MEAL.asItem())
-                .unlockedBy("has_moss", has(ModItems.PLAIN_MOSS_CULTURE)).
+                .unlockedBy("has_moss", has(Blocks.MOSS_BLOCK)).
                 save(recipeOutput);
         oreSmelting(recipeOutput, MOSSY_IRON_SMELTABLES, RecipeCategory.MISC, ModItems.MOSSY_IRON.get(),0.25f, 200, "mossy_iron_smelting");
         oreBlasting(recipeOutput, MOSSY_IRON_SMELTABLES, RecipeCategory.MISC, ModItems.MOSSY_IRON.get(),0.25f, 200, "mossy_iron_blasting");

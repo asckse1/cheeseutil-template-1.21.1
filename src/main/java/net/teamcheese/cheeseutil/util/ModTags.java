@@ -14,12 +14,14 @@ public class ModTags {
         public static final TagKey<Block> MOSS_BLOCKS = createTag("moss_block");
         public static final TagKey<Block> MOSSY_GROWTHS = createTag("moss_growths");
         public static final TagKey<Block> ORES = createTag("ores");
+        public static final TagKey<Block> REQUIRES_CULTURING_KNIFE =createTag("culturing_knife");
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, name));
         }
     }
     public static class Items{
         public static final TagKey<Item> MOSS_CULTURES = createTag("moss_cultures");
+
         private static TagKey<Item> createTag(String name) {
            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(CheeseUtil.MODID, name));
         }

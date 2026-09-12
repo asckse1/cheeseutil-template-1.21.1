@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cheeseutil:block/moss_slab"
+    },
+    "type=top": {
+      "model": "cheeseutil:block/moss_slab_top"
+    },
+    "type=double": {
+      "model": "minecraft:block/moss_block"
+    }
+  }
+}

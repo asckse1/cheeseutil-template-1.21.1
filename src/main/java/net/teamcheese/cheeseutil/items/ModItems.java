@@ -4,15 +4,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.teamcheese.cheeseutil.CheeseUtil;
-import net.teamcheese.cheeseutil.items.custom.FuelItem;
-import net.teamcheese.cheeseutil.items.custom.GrowthCatalystItem;
-import net.teamcheese.cheeseutil.items.custom.DimensionalBookItem;
+import net.teamcheese.cheeseutil.items.custom.*;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.teamcheese.cheeseutil.items.custom.DimensionalPotionItem;
 
 import java.util.List;
 
@@ -33,12 +30,14 @@ public class ModItems {
     public static final DeferredItem<Item> YELLOW_MOSS_CULTURE = ITEMS.register( "yellow_moss_culture",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PLAIN_MOSS_CULTURE = ITEMS.register( "moss_culture",
-            () -> new Item(new Item.Properties()));
+            () -> new PlainMossCulture(new Item.Properties()));
     public static final DeferredItem<Item> STONE_CULTURING_KNIFE = ITEMS.register( "stone_culturing_knife",
-            () -> new Item(new Item.Properties()));
+            () -> new CulturingKnife(new Item.Properties()));
     public static final DeferredItem<Item> MOSSY_IRON = ITEMS.register( "mossy_iron",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RAW_MOSSY_IRON = ITEMS.register("raw_mossy_iron",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> WHITE_MOSS_CULTURE = ITEMS.register("white_moss_culture",
             () -> new Item(new Item.Properties()));
 
 

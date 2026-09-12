@@ -35,5 +35,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHARRED_MOSS_BLOCK.get());
         tag(ModTags.Blocks.ORES)
                 .add(Blocks.IRON_ORE);
+        tag(ModTags.Blocks.REQUIRES_CULTURING_KNIFE)
+                .add(ModBlocks.BLUE_MOSS_BLOCK.get());
     }
 }

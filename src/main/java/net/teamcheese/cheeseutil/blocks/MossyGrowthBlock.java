@@ -35,14 +35,15 @@ public class MossyGrowthBlock extends Block implements BonemealableBlock  {
 
         for (BlockPos changedBlock : BlockPos.betweenClosed(min, max)) {
             BlockState changedBlockState = level.getBlockState(changedBlock);
-            if(changedBlockState.is(Blocks.STONE)){
+            if(changedBlockState.is(Blocks.STONE)) {
                 level.setBlock(
                         changedBlock,
                         state,
                         Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE
                 );
+            }
 
-            if(changedBlockState.is(Blocks.IRON_ORE))  {
+            if(changedBlockState.is(Blocks.IRON_ORE) && state.is(ModBlocks.WHITE_MOSSY_GROWTH))  {
                 level.setBlock(
                         changedBlock,
                         ModBlocks.MOSSY_IRON_ORE.get().defaultBlockState(),
@@ -50,7 +51,7 @@ public class MossyGrowthBlock extends Block implements BonemealableBlock  {
 
                 );
             }
-            }
+
         }
 
     }

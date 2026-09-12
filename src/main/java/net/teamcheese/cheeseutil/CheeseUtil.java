@@ -1,6 +1,7 @@
 package net.teamcheese.cheeseutil;
 
 import net.teamcheese.cheeseutil.blocks.ModBlocks;
+import net.teamcheese.cheeseutil.component.ModDataComponents;
 import net.teamcheese.cheeseutil.items.ModCreativeModeTabs;
 import net.teamcheese.cheeseutil.items.ModItems;
 import org.slf4j.Logger;
@@ -71,6 +72,7 @@ public class CheeseUtil {
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModDataComponents.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CheeseUtil) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.

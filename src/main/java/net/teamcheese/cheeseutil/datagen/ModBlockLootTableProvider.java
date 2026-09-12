@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -85,6 +86,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RED_MOSS_CARPET.get());
         dropSelf(ModBlocks.CHARRED_MOSS_CARPET.get());
         dropSelf(ModBlocks.RAW_MOSSY_IRON_BLOCK.get());
+
+
+        add(ModBlocks.PLAIN_MOSSY_GROWTH.get(),
+                block -> createSingleItemTable(ModItems.PLAIN_MOSS_CULTURE)
+                );
         add(ModBlocks.CHARRED_MOSS_BLOCK.get(),
           block -> createRedstoneLikeOre(block, ModItems.BLACK_MOSS_CULTURE.get(),2.0F, 6.0F)
 
@@ -105,6 +111,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.MOSSY_IRON_ORE.get(),
                 block ->
                         createOreDrop(block, ModItems.RAW_MOSSY_IRON.get()));
+        add(Blocks.MOSS_BLOCK,
+                block ->
+                createSingleItemTable(ModItems.PLAIN_MOSS_CULTURE));
 
 
 
